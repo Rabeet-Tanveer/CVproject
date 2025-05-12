@@ -18,7 +18,7 @@ def parse_args():
     parser.add_argument('--cuda', action='store_true', default=False, help='Use NVIDIA GPU acceleration')
     parser.add_argument('--img', type=str, default='', help='Input image path')
     parser.add_argument('--out_dir', type=str, default='/content/pytorch-smoothgrad/results/grad/', help='Result directory path')
-    parser.add_argument('--n_samples', type=int, default=10, help='Sample size for SmoothGrad')
+    parser.add_argument('--n_samples', type=int, default=25, help='Sample size for SmoothGrad')
     args = parser.parse_args()
     args.cuda = args.cuda and torch.cuda.is_available()
     
